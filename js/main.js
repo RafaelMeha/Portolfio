@@ -53,3 +53,25 @@ sr.reveal('.home__data, .about__img, .skills__subtitle, .skills__text',{});
 sr.reveal('.home__img, .about__subtitle, .about__text, .skills__img',{delay: 400}); 
 sr.reveal('.home__social-icon',{ interval: 200}); 
 sr.reveal('.skills__data, .work__img, .contact__input',{interval: 200}); 
+
+
+function downloadCV() {
+    // Replace 'your-cv-file.pdf' with the actual file name and path
+    const cvFilePath = 'your-cv-file.pdf';
+
+    // Create a link element
+    const link = document.createElement('a');
+    link.href = cvFilePath;
+
+    // Set the download attribute with the desired file name
+    link.download = 'your-name-resume.pdf';
+
+    // Append the link to the body
+    document.body.appendChild(link);
+
+    // Trigger a click on the link to start the download
+    link.click();
+
+    // Remove the link from the DOM after the download is initiated
+    document.body.removeChild(link);
+  }

@@ -8,13 +8,12 @@
   /*Purple 260 - Red 355 - Blue 224 - Pink 340*/
   /* HSL color mode */
   --hue-color: 224;
-  --first-color: hsl(var(--hue-color), 89%, 60%);
-  --second-color: hsl(var(--hue-color), 56%, 12%);
+  --first-color: #C778DD;
+  --second-color: #fff;
   /*===== Fuente y tipografia =====*/
-  --body-font: 'Poppins', sans-serif;
+  --body-font: 'Roboto', sans-serif;
   --big-font-size: 2rem;
   --h2-font-size: 1.25rem;
-  --normal-font-size: .938rem;
   --smaller-font-size: .75rem;
   /*===== Margenes =====*/
   --mb-2: 1rem;
@@ -49,6 +48,24 @@ body {
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
   color: var(--second-color);
+  background: #000000;
+    --gap: 5em;
+    --line: 1px;
+    --color: rgba(181, 170, 170, 0.358);
+  
+    background-image: linear-gradient(
+        -90deg,
+        transparent calc(var(--gap) - var(--line)),
+        var(--color) calc(var(--gap) - var(--line) + 1px),
+        var(--color) var(--gap)
+      ),
+      linear-gradient(
+        0deg,
+        transparent calc(var(--gap) - var(--line)),
+        var(--color) calc(var(--gap) - var(--line) + 1px),
+        var(--color) var(--gap)
+      );
+    background-size: var(--gap) var(--gap);
 }
 
 h1, h2, p {
@@ -112,8 +129,25 @@ img {
   top: 0;
   left: 0;
   z-index: var(--z-fixed);
-  background-color: #fff;
-  box-shadow: 0 1px 4px rgba(146, 161, 176, 0.15);
+  background: #000000;
+  --gap: 5em;
+  --line: 1px;
+  --color: rgba(181, 170, 170, 0.358);
+
+  background-image: linear-gradient(
+      -90deg,
+      transparent calc(var(--gap) - var(--line)),
+      var(--color) calc(var(--gap) - var(--line) + 1px),
+      var(--color) var(--gap)
+    ),
+    linear-gradient(
+      0deg,
+      transparent calc(var(--gap) - var(--line)),
+      var(--color) calc(var(--gap) - var(--line) + 1px),
+      var(--color) var(--gap)
+    );
+  background-size: var(--gap) var(--gap);
+  border-bottom: var(--first-color) solid 1px;
 }
 
 /*===== NAV =====*/
@@ -162,7 +196,7 @@ img {
 }
 
 .nav__logo {
-  color: var(--second-color);
+  color: var(--first-color);
 }
 
 .nav__toggle {
@@ -240,13 +274,16 @@ img {
 
 /*BUTTONS*/
 .button {
+  border: none;
   display: inline-block;
   background-color: var(--first-color);
-  color: #fff;
+  color: #fff;  
   padding: .75rem 2.5rem;
   font-weight: var(--font-semi);
   border-radius: .5rem;
   transition: .3s;
+  cursor: pointer;
+  outline: none;
 }
 
 .button:hover {
@@ -274,8 +311,11 @@ img {
 
 /* ===== SKILLS =====*/
 .skills__container {
+  display: flex;
   row-gap: 2rem;
   text-align: center;
+  align-items: center;
+  justify-content: center;
 }
 
 .skills__subtitle {
@@ -321,15 +361,15 @@ img {
 }
 
 .skills__html {
-  width: 95%;
+  width: 55%;
 }
 
 .skills__css {
-  width: 85%;
+  width: 65%;
 }
 
 .skills__js {
-  width: 65%;
+  width: 45%;
 }
 
 .skills__ux {
@@ -382,11 +422,29 @@ img {
 
 /* ===== FOOTER =====*/
 .footer {
-  background-color: var(--second-color);
   color: #fff;
   text-align: center;
   font-weight: var(--font-semi);
   padding: 2rem 0;
+  background: #000000;
+    --gap: 5em;
+    --line: 1px;
+    --color: rgba(181, 170, 170, 0.358);
+  
+    background-image: linear-gradient(
+        -90deg,
+        transparent calc(var(--gap) - var(--line)),
+        var(--color) calc(var(--gap) - var(--line) + 1px),
+        var(--color) var(--gap)
+      ),
+      linear-gradient(
+        0deg,
+        transparent calc(var(--gap) - var(--line)),
+        var(--color) calc(var(--gap) - var(--line) + 1px),
+        var(--color) var(--gap)
+      );
+    background-size: var(--gap) var(--gap);
+    border-top: var(--first-color) solid 1px;
 }
 
 .footer__title {
@@ -419,9 +477,6 @@ img {
 }
 
 @media screen and (min-width: 576px) {
-  .home {
-    padding: 4rem 0 2rem;
-  }
   .home__social {
     padding-top: 0;
     padding-bottom: 2.5rem;
@@ -463,6 +518,7 @@ img {
 @media screen and (min-width: 768px) {
   body {
     margin: 0;
+    width: 100%;
   }
   .section {
     padding-top: 4rem;
@@ -518,14 +574,14 @@ img {
 }
 
 @media screen and (min-width: 992px) {
+  body{
+    width: 100%;
+  }
   .bd-grid {
     margin-left: auto;
     margin-right: auto;
   }
   .home {
     padding: 10rem 0 2rem;
-  }
-  .home__img {
-    width: 450px;
   }
 }
