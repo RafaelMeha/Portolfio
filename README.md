@@ -10,5 +10,5 @@ Welcome to my GitHub portfolio! This repository showcases my skills, projects, a
 
 ## Live Site
 
-https://rafaelmeha.github.io/portfolioo/html/index.html
+https://rafaelmeha.github.io/Portolfio/html/index.html
 
